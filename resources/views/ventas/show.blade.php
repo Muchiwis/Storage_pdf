@@ -42,8 +42,11 @@
                     <td class="px-6 py-4 text-right">
                         {{ $venta->total }}
                     </td>
-                    <td class="px-6 py-4 text-right">
-                        <a href="{{ asset('storage/pdf_save/'.$venta->producto.'.pdf') }}" download class="font-medium text-blue-600 dark:text-blue-500 hover:underline">PDF</a>
+                    {{-- <td class="px-6 py-4 text-right">
+                        <a href="{{ asset('pdf_save/'.$venta->producto.'.pdf') }}" download class="font-medium text-blue-600 dark:text-blue-500 hover:underline">PDF</a>
+                    </td> --}}
+                    <td>
+                      <a href="{{ route('pdf.descarga', ['pdf' => 'uno.pdf']) }}" class="btn btn-primary">Descargar PDF</a>
                     </td>
                 </tr>
             @endforeach

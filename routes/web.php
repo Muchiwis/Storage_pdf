@@ -24,3 +24,4 @@ Route::resource('/photos', PhotoController::class);
 
 Route::resource('/ventas', VentaController::class);
 Route::get('/ventas/donwload/{pdf}', [VentaController::class, 'donwload'])->name('pdf.donwload');
+Route::get('/ventas/descarga/{pdf}', [VentaController::class, 'descarga'])->name('pdf.descarga');
